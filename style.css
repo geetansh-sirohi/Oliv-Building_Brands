@@ -272,17 +272,22 @@ img {
 }
 
 /* ── MARQUEE ── */
+.marquee-container {
+  padding: 0 9vw;
+}
 
 .marquee-section {
-  max-width: 82vw;
-  justify-self: center;
+  width: 100%;
   overflow: hidden;
 }
 
 .marquee-track {
   display: flex;
-  overflow: hidden;
-  width: 100%;
+  width: max-content;
+  animation: marqueeScroll 15s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .marquee-inner {
@@ -291,33 +296,12 @@ img {
   gap: 100px;
   padding-right: 100px;
   flex-shrink: 0;
-  animation: marqueeScroll 15s linear infinite;
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.marquee-inner img {
-  height: 44px;
-  width: auto;
-  opacity: 1;
-  filter: grayscale(100%) brightness(0);
-  flex-shrink: 0;
-  transition: opacity 0.3s ease, filter 0.3s ease;
-}
-
-.marquee-inner img:hover {
-  opacity: 0.85;
+  min-width: max-content;
 }
 
 @keyframes marqueeScroll {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    transform: translate3d(-100%, 0, 0);
-  }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-33.3333%, 0, 0); }
 }
 
 /* ── SERVICES ── */
