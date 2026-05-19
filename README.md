@@ -87,7 +87,7 @@ A 1024px breakpoint was tested but consistently disturbed the desktop grid. The 
 ## 📂 Folder Structure
 
 ```
-Assignment_5/
+Oliv_Building_Brand/
 ├── index.html
 ├── style.css
 ├── .gitignore
